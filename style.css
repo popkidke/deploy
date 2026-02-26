@@ -109,7 +109,7 @@ canvas{
     100%{box-shadow:0 0 10px #0ff;}
 }
 
-/* Music buttons */
+/* Music buttons responsive */
 .music-controls{display:flex;gap:5px;flex-wrap:wrap;}
 .music-controls button{flex:1;}
 
