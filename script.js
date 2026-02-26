@@ -18,8 +18,7 @@ function draw(){
 setInterval(draw,33);
 
 // Visitor counter
-if(!localStorage.visits)localStorage.visits=0;
-localStorage.visits++;
+if(!localStorage.visits)localStorage.visits=0;localStorage.visits++;
 document.getElementById("visits").innerText=localStorage.visits;
 
 // GitHub Profile
@@ -33,6 +32,7 @@ fetch("https://api.github.com/users/popkidc")
     following.innerText=d.following;
     repos.innerText=d.public_repos;
 
+    // Follow Button
     const btn=document.getElementById("followBtn");
     btn.innerText=`FOLLOW ME ❤️ (${d.followers} Followers)`;
     btn.classList.add("btn-glow");
@@ -66,7 +66,7 @@ fetch("https://api.github.com/users/popkidc/events")
     });
 });
 
-// Background music
+// Music
 const music=document.getElementById("bgMusic");
 music.volume=0.3;
 music.play().catch(()=>{});
